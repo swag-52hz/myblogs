@@ -1,0 +1,21 @@
+{% extends 'base/base.html' %}
+{% block title %}
+    403
+{% endblock %}
+{% block link %}
+    <style>
+        #forbidden{
+            width: 700px;
+            height: 400px;
+            margin-top: 200px;
+            font-size: xx-large;
+            color: red;
+            display: inline-block;
+        }
+    </style>
+{% endblock %}
+{% block main_contain %}
+    <div id="forbidden">
+        <h1>没有权限，还想越界，赶紧敲代码去！！！</h1>
+    </div>
+{% endblock %}

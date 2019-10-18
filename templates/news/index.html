@@ -1,0 +1,74 @@
+{% extends 'base/base.html' %}
+{% block title %}首页{% endblock %}
+{% block link %}
+    <link rel="stylesheet" href="../../static/css/news/index.css">
+{% endblock %}
+{% block main_contain %}
+    <div class="main-contain">
+      <!-- banner start -->
+        <div class="banner">
+            <ul class="pic">
+                <!--淡入淡出banner-->
+
+            </ul>
+            <a href="javascript:void(0);" class="btn prev">
+                <i class="PyWhich py-arrow-left"></i></a>
+            <a href="javascript:void(0);" class="btn next">
+                <i class="PyWhich py-arrow-right"></i></a>
+            <ul class="tab">
+                <!-- 按钮数量必须和图片一致 -->
+
+
+            </ul>
+        </div>
+      <!-- banner end -->
+
+      <!-- content start -->
+      <div class="content">
+        <!-- recommend-news start -->
+          <ul class="recommend-news">
+              {% for i in hot_news %}
+                  <li>
+                      <a href="{% url 'news:news_detail' i.news.id %}" target="_blank">
+                          <div class="recommend-thumbnail">
+                              <img src="{{ i.news.image_url }}" alt="title">
+                          </div>
+                          <p class="info">{{ i.news.title }}</p>
+                      </a>
+                  </li>
+              {% endfor %}
+          </ul>
+        <!-- recommend-news end -->
+
+        <!--  news-nav start-->
+          <nav class="news-nav">
+              <ul class="clearfix">
+                  <li class="active"><a href="javascript:void(0)">最新资讯</a></li>
+                  {% for tag in tags %}
+                      <li><a href="javascript:void(0)" data-id="{{ tag.id }}">{{ tag.name }}</a></li>
+                  {% endfor %}
+
+              </ul>
+          </nav>
+        <!--  news-nav end -->
+
+        <!-- news-contain start -->
+          <div class="news-contain">
+              <ul class="news-list">
+
+              </ul>
+          </div>
+        <!-- news-contain end -->
+
+        <!-- btn-more start -->
+        <a href="javascript:void(0);" class="btn-more">加载更多</a>
+        <!-- btn-more end -->
+      </div>
+      <!-- content end -->
+    </div>
+{% endblock %}
+{% block script %}
+    <script src="../../static/js/news/index.js"></script>
+{% endblock %}
+
+

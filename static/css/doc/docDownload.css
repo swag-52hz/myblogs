@@ -1,0 +1,103 @@
+/* ================= main start ================= */
+#main {
+    margin-top: 25px;
+    min-height: 700px;
+    flex: 1;
+}
+
+/* ========= main-contain start ============ */
+#main .main-contain {
+    width: 800px;
+    float: left;
+    margin-bottom: 30px;
+}
+
+/* ========= banner start =========== */
+.main-contain .banner {
+    width: 100%;
+}
+
+.main-contain .banner img {
+    max-width: 100%;
+}
+
+.main-contain .pay-doc-contain {
+    background: #fff;
+}
+
+.main-contain .pay-doc-contain .pay-list {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: wrap;
+    padding: 0 20px 20px;
+}
+
+.main-contain .pay-doc-contain .pay-item {
+    width: 800px;
+    height: 200px;
+    border-top: 1px solid #ddd;
+    margin-top: 20px;
+    display: flex;
+}
+
+.main-contain .pay-doc-contain .pay-item:hover {
+    box-shadow: 2px 2px 2px #ccc;
+}
+
+.pay-doc-contain .pay-item .pay-img {
+    width: 120px;
+    margin-right: 30px;
+}
+
+.pay-doc-contain .pay-item .pay-contain {
+    width: 250px;
+    position: relative
+}
+
+.pay-item .pay-contain .pay-title {
+    font-size: 20px;
+    line-height: 40px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.pay-item .pay-contain .pay-desc {
+    line-height: 20px;
+    color: #878787;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: 14px;
+    overflow: hidden;
+}
+
+.pay-item .pay-price {
+    display: block;
+    font-size: 20px;
+    text-align: right;
+    padding-right: 20px;
+    color: coral;
+}
+
+.d-contain {
+    width: 100%;
+    margin: 20px 0 20px ;
+    font-size: 18px;
+    line-height: normal;
+}
+
+.d-contain .doc-desc {
+    text-indent: 2em;
+    margin: 15px;
+    /*padding: 10px;*/
+}
+
+.d-contain .doc-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: chocolate;
+}
+/* ========= banner end =========== */
+/* ========= main-contain end ============ */
+/* ================= main end ================= */
